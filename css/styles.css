@@ -113,7 +113,20 @@ img {
 }
 
 .active-link {
+  position: relative;
   color: var(--accent-color);
+}
+
+.active-link::after {
+  position: absolute;
+  right: -4%;
+  bottom: -1px;
+  display: block;
+  content: '';
+  width: 108%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .site-nav {
