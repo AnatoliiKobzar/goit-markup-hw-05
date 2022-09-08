@@ -7,6 +7,7 @@
   --secondary-background-color: #2f303a;
   --background-button-color: #f5f4fa;
   --fill-icon: #afb1b8;
+  --main-anim: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 body {
@@ -86,6 +87,13 @@ img {
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
+
+  transition: color var(--main-anim);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--accent-color);
 }
 
 .contact-link {
@@ -100,11 +108,8 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--accent-color);
+  transition: color var(--main-anim);
 }
 
 .contact-link:hover,
@@ -207,6 +212,8 @@ img {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+
+  transition: background-color var(--main-anim);
 }
 
 .hero-button:focus,
@@ -292,10 +299,6 @@ img {
   margin-left: 30px;
 }
 
-img {
-  display: block;
-}
-
 /* Наша команда */
 
 .team {
@@ -347,6 +350,8 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition: background-color var(--main-anim);
 }
 
 .socials-link:hover,
@@ -356,6 +361,8 @@ img {
 
 .team-contacts-icon {
   fill: var(--fill-icon);
+
+  transition: fill var(--main-anim);
 }
 
 .socials-link:hover .team-contacts-icon,
@@ -384,10 +391,14 @@ img {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+
+  transition: border var(--main-anim);
 }
 
 .client-icon {
   fill: var(--fill-icon);
+
+  transition: fill var(--main-anim);
 }
 
 .client-link:hover,
@@ -418,6 +429,8 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   font-style: normal;
+
+  transition: color var(--main-anim);
 }
 
 .footer-link:hover,
@@ -474,6 +487,8 @@ img {
   border-radius: 4px;
   padding: 6px 22px;
   cursor: pointer;
+
+  transition: background-color var(--main-anim), color var(--main-anim), box-shadow var(--main-anim);
 }
 
 .portfolio-button:hover,
@@ -538,6 +553,8 @@ img {
 .examples-item {
   margin-top: 30px;
   margin-left: 30px;
+
+  transition: box-shadow var(--main-anim);
 }
 
 .examples-item:hover {
