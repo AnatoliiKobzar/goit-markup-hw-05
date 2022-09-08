@@ -2,6 +2,7 @@
   --main-font: 'Roboto', sans-serif;
   --main-font-color: #212121;
   --secondary-font-color: #757575;
+  --light-color: #ffffff;
   --accent-color: #2196f3;
   --main-background-color: #ffffff;
   --secondary-background-color: #2f303a;
@@ -190,7 +191,7 @@ img {
 .hero-title {
   margin: 0;
   margin-bottom: 30px;
-  color: #ffffff;
+  color: var(--light-color);
   font-size: 44px;
   font-weight: 900;
   text-transform: uppercase;
@@ -202,7 +203,7 @@ img {
 
 .hero-button {
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--light-color);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.88;
@@ -297,6 +298,30 @@ img {
 
 .employments .employments-item + .employments-item {
   margin-left: 30px;
+}
+
+.employments-item {
+  position: relative;
+}
+
+.employments-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 74px;
+  width: 100%;
+
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--light-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Наша команда */
@@ -439,7 +464,7 @@ img {
 }
 
 .address {
-  color: #ffffff;
+  color: var(--light-color);
 }
 
 .address-item {
@@ -456,7 +481,7 @@ img {
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--main-background-color);
+  color: var(--light-color);
 }
 
 .footer-socials-link {
@@ -494,7 +519,7 @@ img {
 .portfolio-button:hover,
 .portfolio-button:focus {
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--light-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -560,4 +585,42 @@ img {
 .examples-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.examples-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition: transform var(--main-anim);
+}
+
+.examples-item:hover .overlay {
+  transform: translateY(0);
+}
+
+.overlay-desc {
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+
+  color: var(--light-color);
 }
